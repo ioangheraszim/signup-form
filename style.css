@@ -6,6 +6,7 @@
     --valid-clr: #5479E1;
     --invalid-clr: #C03131;
     --white: #FFFFFF;
+    --background-clr: #F9FAFB;
 
     /* Fonts */
     --font-logo: "MedievalSharp", serif;
@@ -136,9 +137,29 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         input:focus {
-            color: var(--primary-clr);
+            font-weight: 500;
             border: 1px solid var(--valid-clr);
+            box-shadow: 0px 8px 10px 5px rgba(222,222,222,1);
         }
+
+        input {
+            padding: 0.5rem;
+            border: 1px solid #d8d8d8;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        input:focus {
+            font-weight: 500;
+            border: 1px solid var(--valid-clr);
+            box-shadow: 0px 8px 10px 5px rgba(222,222,222,1);
+        }
+        
+        input:focus:invalid,
+        input:invalid:focus {
+            border: 1px solid var(--invalid-clr);
+        }
+        
       
     }
 
@@ -148,6 +169,10 @@ h1, h2, h3, h4, h5, h6 {
         a {
             text-decoration: none;
             color: var(--primary-clr);
+
+            &:hover {
+                font-weight: 800;
+            }
         }
     }
 }
@@ -165,4 +190,76 @@ h1, h2, h3, h4, h5, h6 {
         margin: .5rem;
     }
 
+}
+
+@media (min-width: 1280px) {
+
+    body {
+        background-color: var(--background-clr);
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        width: min(100% - 2rem, 1440px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .container__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container__background {
+        position: relative;
+        width: 70%;
+        min-height: 90%;
+    }
+
+    .container__background-logo {
+        height: 200px;
+        top: 20%;
+    }
+    
+    .container__logo {
+        position: absolute;
+        top: 20%;
+    
+        .logo__image {
+            width: 20%;
+        }
+    }
+
+    .form__container {
+        padding: 1rem;
+    }
+    
+
+    form {
+        padding-right: 7rem;
+
+        button {
+            width: 200px;
+        }
+    }
+
+
+    .form__warning, .form__ad {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .form__names, .form__contacts, .form__passwords {
+        flex-direction: row;
+        justify-content: flex-start;
+    
+        div {
+            width: 100%;
+            padding: 0rem 1rem;
+            margin: 0rem 2rem 0rem 0rem;
+        }
+    
+    }
 }
