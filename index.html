@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Simple Sign Up Form</title>
 </head>
 <body>
-    
+    <main class="container">
+        <section class="container__content">
+            <div class="container__background">
+                <div class="container__background-logo">
+                </div>    
+                <div class="container__logo">
+                    <img class="logo__image" src="./design/logo.png" alt="the logo of odin image">
+                    <p class="logo__text">ODIN</p>
+                </div>            
+            </div>
+            <div class="container__form">
+                <div class="form__content">
+                    <p class="form__warning">This is not a real online service! 
+                        You know you need something like this in your life to help you realize you deepest dreams.
+                        Sign up <i>now</i> to get started.
+                    </p>
+                    <p class="form__ad">You <i>know</i> you want to.</p>
+                </div>      
+                <div class="form__container">
+                    <h1>Let's do this!</h1>
+                    <form class="form" action="">
+                        <div class="form__names">
+                            <div>
+                                <label for="first__name">First Name</label>
+                                <input type="text" id="first_name" required>
+                            </div>
+                            <div>
+                                <label for="last__name">Last Name</label>
+                                <input type="text" id="last_name" required>
+                            </div>                            
+                        </div>
+                        <div class="form__contacts">
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div>
+                                <label for="phone_number">Phone Number</label>
+                                <input type="number" id="phone_number" required>
+                            </div>
+                        </div>
+                        <div class="form__passwords">
+                            <div>
+                                <label for="password">Password</label>
+                                <input type="password" id="password" required>
+                            </div>
+                            <div>
+                                <label for="last_name">Confirmation Password</label>
+                                <input type="password" id="password" required>
+                            </div>
+                        </div>
+                        <button> Create Account</button>
+                    </form>
+                    <p class="form__question">Already have an account? <a href="#">Log in</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

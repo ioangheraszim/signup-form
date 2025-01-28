@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Primary color */
+    --primary-clr: #596D48;
+    --valid-clr: #5479E1;
+    --invalid-clr: #C03131;
+    --white: #FFFFFF;
+
+    /* Fonts */
+    --font-logo: "MedievalSharp", serif;
+    --text-logo: "Montserrat", serif;
+}
+
+/* Resets */
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #ffffff;
+
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--text-logo);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+
+.container {
+    width: min(100%, 375px);
+    margin: 0 auto;
+}
+
+.container__background {
+    min-height: 200px;
+    background-image: url(./design/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+    position: relative;
+}
+
+.container__background-logo {
+    background-color: black;
+    opacity: .65;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.container__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .logo__image {
+        width: 30%;
+    }
+}
+
+
+.container__form {
+    padding: 1rem .5rem;
+}
+
+.form__container {
+    margin: 1rem 0;
+    background-color: var(--white);
+    padding: 1.25rem 0;
+    box-shadow: 0px 8px 10px 5px rgba(222,222,222,1);
+
+    h1 {
+        font-size: 2rem;
+        padding: .5rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        button {
+            cursor: pointer;
+            margin: .75rem;
+            padding: 1rem;
+            border: none;
+            background-color: var(--primary-clr);
+            color: var(--white);
+            border-radius: 5px;
+            box-shadow: 0px 8px 10px 5px rgba(222,222,222,1);
+        }
+
+        button:focus {
+            box-shadow: none;
+        }
+
+        label {
+            font-weight: 500;
+            padding: .2rem 0;
+            text-transform: uppercase;
+        }
+
+        input {
+            padding: .5rem;
+            border: 1px solid #d8d8d8;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            color: var(--primary-clr);
+            border: 1px solid var(--valid-clr);
+        }
+      
+    }
+
+    .form__question {
+        margin: .75rem;
+
+        a {
+            text-decoration: none;
+            color: var(--primary-clr);
+        }
+    }
+}
+
+.form__names, .form__contacts, .form__passwords {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: .2rem;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: .5rem;
+    }
+
+}
